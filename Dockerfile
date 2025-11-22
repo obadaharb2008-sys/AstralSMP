@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN export VERSION=$(curl -s https://api.papermc.io/v2/projects/paper | jq -r '.
 
 # Download Geyser & Floodgate
 RUN curl -L -o geyser.jar https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/server.jar
-RUN curl -L -o floodgate.jar https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/server.jar
+RUN curl -L -o floodgate.jar https://download.geysermc.io/v2/projects/floodgate/versions/latest/builds/latest/downloads/server.jar
 
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
