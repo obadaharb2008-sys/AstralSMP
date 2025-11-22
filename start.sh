@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "eula=true" > eula.txt
+java -Xms256M -Xmx512M -jar paper.jar nogui
 
-java -Xms1G -Xmx2G -jar paper.jar nogui
