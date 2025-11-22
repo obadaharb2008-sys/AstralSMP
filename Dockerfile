@@ -11,7 +11,6 @@ RUN export VERSION=$(curl -s https://api.papermc.io/v2/projects/paper | jq -r '.
     export BUILD=$(curl -s https://api.papermc.io/v2/projects/paper/versions/$VERSION | jq -r '.builds[-1]') && \
     curl -o paper.jar "https://api.papermc.io/v2/projects/paper/versions/$VERSION/builds/$BUILD/downloads/paper-$VERSION-$BUILD.jar"
 
-# Download Geyser & Floodgate (latest)
 RUN curl -L -o geyser.jar https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/server.jar
 RUN curl -L -o floodgate.jar https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/server.jar
 
