@@ -1,5 +1,6 @@
 FROM eclipse-temurin:21-jdk
 
+
 WORKDIR /app
 
 RUN apt-get update && \
